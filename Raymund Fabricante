@@ -1,1 +1,100 @@
-# ITYmuFabricante-star-my-project-
+# ITYmuFabricante-star-my-project
+
+
+/*FOR MY html.index code*/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Appreciation Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">ART•CORE</div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Exploring Visual Harmony</h1>
+        <p>A journey through responsive digital design.</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About the Project</h2>
+        <p>This page demonstrates how art and technology intersect through responsive layouts that adapt to any device.</p>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="card">Project 1</div>
+        <div class="card">Project 2</div>
+        <div class="card">Project 3</div>
+        <div class="card">Project 4</div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Art Appreciation Activity</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+ And For the CSS style code
+
+/* General Styles */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body { line-height: 1.6; color: #333; background: #f4f4f4; }
+section { padding: 40px 20px; text-align: center; }
+
+/* Header - Using Flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav a { margin-left: 15px; text-decoration: none; color: #333; font-weight: bold; }
+
+/* Hero Section */
+.hero { background: #2c3e50; color: white; padding: 80px 20px; }
+
+/* Gallery - Mobile First (Single Column) */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.card { background: #fff; padding: 50px; border-radius: 8px; border: 1px solid #ddd; }
+
+/* Footer */
+.footer { background: #eee; padding: 20px; text-align: center; font-size: 0.9rem; }
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Tablet View (2 Columns) */
+@media (min-width: 600px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop View (Multi-Column Layout) */
+@media (min-width: 1024px) {
+    .gallery { grid-template-columns: repeat(4, 1fr); }
+    .about { padding: 80px 15%; } /* Better spacing for wide screens */
+}
